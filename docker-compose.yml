@@ -3,8 +3,6 @@ version: "3"
 services:
   nginx:
     image: nginx:latest
-    networks:
-      - nginx-proxy
     ports:
       - 80:80
     expose:
@@ -16,8 +14,6 @@ services:
   app:
     build: .
     command: yarn start
-    networks:
-      - nginx-proxy
     expose:
       - 3000
 networks:
