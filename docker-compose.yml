@@ -4,8 +4,8 @@ services:
   app:
     build: .
     command: yarn start
-    ports:
-      - 80:3000
+    environment:
+      - VIRTUAL_HOST=billshare.com.br,www.billshare.com.br
     expose:
       - 80
 networks:
