@@ -4,3 +4,11 @@ services:
   nginx:
     ports:
       - 80:80
+    networks:
+      - nginx-proxy
+  app:
+    networks:
+      - nginx-proxy
+networks:
+  nginx-proxy:
+    driver: bridge
